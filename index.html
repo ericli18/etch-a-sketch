@@ -6,22 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch A Sketch</title>
     <link href="./style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css"/> <!-- 'classic' theme -->
+    <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js" defer></script>
+    <script src="./script.js" defer></script>
 </head>
 <body>
     <div class="content">
         <div class="heading">
-
+            <h1>Etch a Sketch!</h1>
         </div>
+
         <div class="main">
             <div class="options">
-                
+                <div class="pickr-container">
+                    <div class="color-picker"></div>
+                </div>
+                <div class="slider"></div>
             </div>
             <div class="sketcher">
 
             </div>
         </div>
-        <div class="footer">
 
+        <div class="footer">
+            <span class="footer-links">This is the footer</span>
         </div>
     </div>
 </body>
