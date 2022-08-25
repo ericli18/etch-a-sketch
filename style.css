@@ -26,3 +26,16 @@ body,html {
     width: 500px;
     height: 500px;
 }
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+}
+
+.slider-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
