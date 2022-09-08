@@ -23,3 +23,11 @@ const pickr = Pickr.create({
         }
     }
 });
+
+const slider = document.getElementById("slider");
+const sliderText = document.getElementById("slider-result");
+
+slider.oninput = function()
+{
+    sliderText.textContent = slider.value;
+}
