@@ -51,7 +51,7 @@ function updateDivs(size)
             tempBox.style.width = `${500/size}px`;
             tempBox.style.height = `${500/size}px`;
             tempBox.style.flex = "0 0 1";
-            tempBox.style.outline = "2px solid red";
+            tempBox.style.outline = "1px solid black";
         }
     }
 }
