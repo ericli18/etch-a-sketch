@@ -32,11 +32,23 @@ main();
 function main ()
 {
     updateDivs(slider.value);
+    updateColors();
     slider.oninput = function()
     {
     sliderText.textContent = slider.value;
     updateDivs(slider.value);
+    updateColors();
     }
+}
+
+function updateColors()
+{
+    let divs = document.querySelectorAll(".draw");
+    divs.forEach(div => {
+        div.addEventListener('click', function(e){
+            div.style.backgroundColor = "blue";
+        })
+    })
 }
 
 function updateDivs(size)
@@ -48,6 +60,7 @@ function updateDivs(size)
         {
             let tempBox = document.createElement('div');
             container.appendChild(tempBox);
+            tempBox.classList.add("draw");
             tempBox.style.width = `${500/size}px`;
             tempBox.style.height = `${500/size}px`;
             tempBox.style.flex = "0 0 1";
