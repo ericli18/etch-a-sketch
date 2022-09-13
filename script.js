@@ -45,7 +45,7 @@ function updateColors()
 {
     let divs = document.querySelectorAll(".draw");
     divs.forEach(div => {
-        div.addEventListener('click', function(e){
+        div.addEventListener('mousedown', function(e){
             div.style.backgroundColor = "blue";
         })
     })
