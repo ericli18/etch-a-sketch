@@ -45,8 +45,15 @@ function updateColors()
 {
     let divs = document.querySelectorAll(".draw");
     divs.forEach(div => {
-        div.addEventListener('mousedown', function(e){
-            div.style.backgroundColor = "blue";
+        div.addEventListener('click', function(e)
+        {
+            div.style.backgroundColor = pickr.getColor().toRGBA().toString(0);
+        });
+        div.addEventListener('mouseover', function(e){
+            if(e.buttons == 1)
+            {
+                div.style.backgroundColor = pickr.getColor().toRGBA().toString(0);
+            }
         })
     })
 }
