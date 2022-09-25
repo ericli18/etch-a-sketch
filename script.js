@@ -27,35 +27,35 @@ const slider = document.getElementById("slider");
 const sliderText = document.getElementById("slider-result");
 const container = document.querySelector(".sketcher");
 
+
 main();
 
 function main ()
 {
     updateDivs(slider.value);
-    updateColors();
+    colorDivs();
     slider.oninput = function()
     {
     sliderText.textContent = slider.value;
     updateDivs(slider.value);
-    updateColors();
+    colorDivs();
     }
 }
 
-function updateColors()
+function colorDivs()
 {
-    let divs = document.querySelectorAll(".draw");
-    divs.forEach(div => {
-        div.addEventListener('click', function(e)
+    const divs = document.querySelectorAll(".draw");
+    divs.forEach(div => div.addEventListener("click", function(e)
+    {
+        div.style.backgroundColor = pickr.getColor().toRGBA().toString(0);
+    }));
+    divs.forEach(div => div.addEventListener("mouseover", function(e)
+    {
+        if(e.buttons == 1)
         {
-            div.style.backgroundColor = pickr.getColor().toRGBA().toString(0);
-        });
-        div.addEventListener('mouseover', function(e){
-            if(e.buttons == 1)
-            {
-                div.style.backgroundColor = pickr.getColor().toRGBA().toString(0);
-            }
-        })
-    })
+            div.style.backgroundColor = pickr.getColor().toHEXA().toString();
+        }
+    }));
 }
 
 function updateDivs(size)
